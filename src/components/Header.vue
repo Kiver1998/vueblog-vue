@@ -10,7 +10,10 @@
                 <el-divider direction="vertical" href="/blog/add"></el-divider>
                 <span><el-link :underline="false" type="success">发表文章</el-link></span>
                 <el-divider direction="vertical"></el-divider>
-                <span><el-link :underline="false" type="danger" @click="logout">退出</el-link></span>
+                <span v-show="!hasLogin"><el-link :underline="false" type="primary" href="/login">登录</el-link></span>
+
+                <span v-show="hasLogin"><el-link :underline="false" type="danger" @click="logout">退出</el-link></span>
+
             </div>
         </template>
             </div>
@@ -25,8 +28,8 @@
                     user:{
                         username:'请先登录',
                         avatar:'https://cube.elemecdn.com/9/c2/f0ee8a3c7c9638a54940382568c9dpng.png'
-                    }
-
+                    },
+                    hasLogin:false
                 }
 
             },
@@ -46,6 +49,7 @@
                 if(this.$store.getters.getUser.username){
                     this.user.username=this.$store.getters.getUser.username
                     this.user.avatar=this.$store.getters.getUser.avatar
+                    this.hasLogin=true
                 }
             }
         }
