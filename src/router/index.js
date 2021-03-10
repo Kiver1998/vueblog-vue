@@ -26,11 +26,11 @@ const routes = [
   {
     path: '/blog/:blogId',
     name: 'BlogDetail',
-    component: BlogEdit
+    component: BlogDetail
   },
   {
     path: '/blog/add',
-    name: 'BlogDetail',
+    name: 'BlogAdd',
     component: BlogEdit
   },
 

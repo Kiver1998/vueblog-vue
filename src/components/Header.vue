@@ -7,8 +7,8 @@
         <template>
             <div class="maction">
                 <span><el-link :underline="false" href="/blogs">主页</el-link></span>
-                <el-divider direction="vertical" href="/blog/add"></el-divider>
-                <span><el-link :underline="false" type="success">发表文章</el-link></span>
+                <el-divider direction="vertical" ></el-divider>
+                <span><el-link :underline="false" type="success" href="/blog/add">发表文章</el-link></span>
                 <el-divider direction="vertical"></el-divider>
                 <span v-show="!hasLogin"><el-link :underline="false" type="primary" href="/login">登录</el-link></span>
 
