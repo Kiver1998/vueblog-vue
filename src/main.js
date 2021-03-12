@@ -7,6 +7,7 @@ import axios from 'axios'
 
 import "element-ui/lib/theme-chalk/index.css"
 import "./axios"
+import "./permission"
 
 
 import mavonEditor from 'mavon-editor'
